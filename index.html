@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Data to Highcharts</title>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+    <script type="text/javascript" src="https://code.highcharts.com/highcharts.js"></script>
+    <script type="text/javascript" src="https://code.highcharts.com/modules/data.js"></script>
+</head>
+
+<body>
+
+    <div id="hc1" class="hc1 chart"></div>
+    <script type="text/javascript">
+        $.ajax({
+            type: "GET",
+            url: 'csv_example_data.csv', // Use a Serverside script to get Data with Credentials i.e. php_request_script.php
+            cache: false,
+            success: function(data) {
+
+                console.log(data);
+                $('#hc1').highcharts({
+                    chart: {
+                        type: 'column' //or spline
+                    },
+                    data: {
+                        csv: data,
+                        itemDelimiter: ';',
+                        lineDelimiter: '\n'
+                    },
+                    title: {
+                        text: 'Meteomatics CSV Data to Highcharts'
+                    }
+                });
+            },
+            error: function() {
+                console.log('error');
+            }
+        });
+    </script>
+
+
+</body>
+
+</html>
