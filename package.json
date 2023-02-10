@@ -1,0 +1,26 @@
+{
+  "name": "javascript-csv-data-to-highcharts",
+  "version": "1.0.0",
+  "description": "[![logo](https://static.meteomatics.com/meteomatics-logo.png)](https://www.meteomatics.com \"Meteomatics - Your Experts in Weather Data Processing\")",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/meteomatics/javascript-csv-data-to-highcharts.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/meteomatics/javascript-csv-data-to-highcharts/issues"
+  },
+  "homepage": "https://github.com/meteomatics/javascript-csv-data-to-highcharts#readme",
+  "devDependencies": {
+    "html-webpack-plugin": "^4.5.2",
+    "webpack": "^4.46.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.2"
+  }
+}
